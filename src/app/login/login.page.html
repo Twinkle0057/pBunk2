@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding ion-text-center">
+  <div id="recaptcha-container" style="display: none;"></div>
+  <div *ngIf="!otpSent">
+  <ion-item>
+   <ion-label position="floating">Phone Number</ion-label>
+   <ion-input id="phoneNumber"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+   <ion-label>
+   <ion-note>
+    OTP will be sent to this phone number
+   </ion-note>
+   </ion-label>
+  </ion-item>
+  <ion-button (click)="sendOTP()" expand="block">
+  Send OTP
+  </ion-button>
+ </div>
+</ion-content>
